@@ -1,0 +1,15 @@
+import http from "http";
+
+export const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "application/json" });
+  console.log("a");
+  res.end(
+    JSON.stringify({
+      data: "It works",
+    })
+  );
+});
+
+server.listen(3000, () => {
+  console.log("Server listening on port 3000");
+});
